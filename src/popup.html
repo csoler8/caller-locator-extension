@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Formatter</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <h2>Phone Number Formatter</h2>
+
+    <!-- First Selection: Locate Options -->
+    <label for="lookupType">Choose lookup type:</label>
+    <select id="lookupType">
+        <option value="callee">Locate only Callee</option>
+        <option value="caller">Locate only Caller</option>
+        <option value="both">Locate both Caller and Callee</option>
+    </select>
+
+    <!-- Text Area for Input -->
+    <textarea id="phoneNumbers" placeholder="Paste numbers here (one per line)"></textarea>
+
+    <!-- Second Selection: Formatting Options -->
+    <label for="formatType">Choose formatting type:</label>
+    <select id="formatType">
+        <option value="symbio">Symbio (Auto add +)</option>
+        <option value="synch">Synch (Keep numbers as is)</option>
+        <option value="customPrefix">Select country prefix</option>
+    </select>
+
+    <!-- Country Prefix Input (Hidden by Default) -->
+    <input type="text" id="prefixInput" placeholder="Enter country code (e.g., 57)" style="display: none;">
+
+    <button id="formatButton">Format & Copy</button>
+    <textarea id="output" readonly></textarea>
+
+    <script src="popup.js"></script>
+</body>
+</html>
