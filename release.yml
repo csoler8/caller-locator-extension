@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write  # 👈 this allows release creation
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,4 +33,3 @@ jobs:
           files: chrome-extension.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
